@@ -1,2 +1,2 @@
-1. worker() becomes a goroutine and waits for next execution flow steps;
-2. if print moved before wait(), execution order is not guaranteed. Otherwise, if print state is after wait() in main, order is clear: main - goroutine - wait - main - exit.
+1. Ожидала main на wg.Wait(). Работника мы остановили брейкпоинтом. wg.Go(worker) запускает функцию в отдельной горутине.
+2. После Wait() гарантированно печатаем после завершения работника. При этом работник может завершиться даже раньше, чем main доберётся до Wait() — тогда ждать уже нечего.
