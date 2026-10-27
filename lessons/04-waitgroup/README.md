@@ -1,0 +1,2 @@
+1. worker() becomes a goroutine and waits for next execution flow steps;
+2. if print moved before wait(), execution order is not guaranteed. Otherwise, if print state is after wait() in main, order is clear: main - goroutine - wait - main - exit.
