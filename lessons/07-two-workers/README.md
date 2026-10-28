@@ -1,2 +1,2 @@
-1. Goroutine order isn't guarantying send and receive order.
-2. First getter got one int and then second will get second. So random-in and random-out.
+1. The order in which workers send their values is not guaranteed; main receives two values sequentially.
+2. First getter got one int and then second will get second. Fixed first and second vars and no guarantee for get order.
