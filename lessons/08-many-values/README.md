@@ -1,2 +1,2 @@
-1. Two producers with 3 sends need exactly 6 receivers. If there will be 7, main() still trying to get 7th int and falls into deadlock state.
-2. Closing workers() aren't close wait in main(). When both of them are closed, main() still waiting for 7th int.
+1. Two producers with 3 sends need exactly 6 receive operations. If there will be 7, main() still trying to get 7th int and falls into deadlock state.
+2. worker() finishes aren't close wait in main(). When both of them are closed, main() still waiting for 7th int.
