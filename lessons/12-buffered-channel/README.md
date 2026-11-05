@@ -1,0 +1,2 @@
+1. If there is no buffer we can't get to GET operation in this single-goroutine example: we stuck at SEND channel <- 7.
+2. We can transfer two ints through 1-int buffer: we can write new one int in channel after cleaning it (read from it)
