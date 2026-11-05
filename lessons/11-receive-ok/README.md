@@ -1,1 +1,2 @@
-Two zeroes are different: second one was read from closed channel (ok == false). We didn't catch deadlock because receivers are closed and program run exits instead of error and crash
+Two zeroes are different: second one was read from closed channel (ok == false). We didn't catch deadlock because receivers are closed and program run exits instead of error and crash.
+Channel is closed and main() continues to execute, third iteration gets 0, false from closed channel and waiting doesn't stop. Program quits only after loop execution. Closing channel doesn't stop execution.
