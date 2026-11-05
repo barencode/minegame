@@ -1,0 +1,1 @@
+Ok may be true with already closed channel if we get data from its buffer. After channel is closed its buffer still available for read
