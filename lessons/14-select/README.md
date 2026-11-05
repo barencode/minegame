@@ -1,0 +1,1 @@
+Order is not guaranteed, but reading from 2-cycle loop in this example always got all the ints from their channels: first read channel is open, but its buffer is empty, so another select case runs in next loop.
