@@ -1,0 +1,1 @@
+7 is not in the second pass because default: isn't triggered in this pass: we got no data in first pass and channel got 7, then we read it. After the loop channel is empty and opened.
