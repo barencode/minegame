@@ -1,0 +1,1 @@
+In second pass 7 was read after add in default: in first pass. We got no data in first pass and channel got 7, then we read it next time. After the loop channel is empty and opened.
