@@ -9,7 +9,7 @@ func main() {
 	for range 2 {
 		select {
 		case value, ok := <-channel:
-			println(value, ok)
+			fmt.Println(value, ok)
 		default:
 			fmt.Println("Данных пока нет")
 		}
