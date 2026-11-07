@@ -1,0 +1,1 @@
+After first pass empty channel becomes nil channel (channel = nil). Select guards reading from it (read not ready) and triggers default case.
