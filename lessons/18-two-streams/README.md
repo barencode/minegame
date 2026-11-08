@@ -1,0 +1,2 @@
+1. We should use OR not AND in main cycle loop because we need to continue while at least one channel is not nil and SELECT will work with another channel until it not nil
+2. Total is added up only by main goroutine, containing SELECT and doesn't create separate goroutines.
