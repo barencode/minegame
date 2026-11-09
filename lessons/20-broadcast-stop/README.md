@@ -1,0 +1,1 @@
+One close(stop) is enough for two routines because they are sharing this signal and channel remains closed after read by one of workers - this way it shares state across theoretically infinite quantity of workers.
