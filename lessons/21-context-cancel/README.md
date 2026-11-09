@@ -1,0 +1,2 @@
+1. cancel() is context (ctx) signal, which is an input parameter for both worker() calls (and all its copies receive same ctx). Functions are waiting for Done() signal, and cancel() from main() makes its case ready inside worker().
+2. wg.Wait() is still necessary because main can end earlier than both goroutines
