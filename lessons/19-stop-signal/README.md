@@ -1,0 +1,2 @@
+1. stop closes and makes stop case in worker() ready -> loop and worker() exit, worker did only one portion
+2. wg.Wait() needed after close(stop) in case early main() exit (earlier than worker()). If there is no closing, second iteration never completes in worker() because main doesn't get from result - result channel can't write and has no buffer. Without stop closing both cases in worker( ) aren't ready.
